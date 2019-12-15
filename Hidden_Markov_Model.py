@@ -135,13 +135,11 @@ def main():
     pi2 = np.array([0.0, 0.0, 0.0, 1.0])
     B2 = np.array([[1.0, 0.0, 0.0, 0.0, 0.0], [0.0, 0.0, 0.5, 0.0, 0.5], [0.0, 0.0, 0.5, 0.5, 0.0], [0.0, 0.5, 0.0, 0.0, 0.5]] )
     
-    #Random Sequence generator - Q3 a)
     randomSequencegenerator(pi1,A1,B1)
     
     print("")
     print("===============================================")
     
-    #forward Algorithm - Q3 b)
     print("Classification of sequences based on HMM parameters are as follows:")
     
     sequences=[['A','D','C','B','D','C','C','S'],['B','D','S'],['B','C','C','B','D','D','C','A','C','S'],
@@ -160,7 +158,6 @@ def main():
     forward(pi1,A1,B1,pi2,A2,B2,observations,sequences)
     print("===============================================")
     
-    #Viterbi Algorithm - Q3 c)
     print("Hidden states for each sequence of observations using HMM λ2 is as below:")
     viterbi(pi2,A2,B2,observations,sequences)
     
